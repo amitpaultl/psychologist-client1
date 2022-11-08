@@ -28,7 +28,7 @@ const AuthContext = ({children}) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
 
-    // logout 
+    // logout all
     const logOut =()=>{
         signOut(auth)
     }
