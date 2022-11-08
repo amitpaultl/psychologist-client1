@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const SingUp = () => {
     // email sing up
-    const {emailLogin,googleLogin} = useContext(AuthProvider);
+    const {emailLogin,googlesingup} = useContext(AuthProvider);
 
     // email handaler
     const handaleremail = (e)=>{
@@ -38,7 +38,7 @@ const SingUp = () => {
 
     // google sing in
     const googlelogin =()=>{
-        googleLogin()
+        googlesingup()
         .then((result) => {
             // The signed-in user info.
             const user = result.user;

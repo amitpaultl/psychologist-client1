@@ -4,7 +4,7 @@ import { FaGoogle } from "react-icons/fa";
 import { AuthProvider } from '../../Context/AuthContext';
 const Login = () => {
     // contex api
-    const { loginemail } = useContext(AuthProvider);
+    const { loginemail,googleLogin } = useContext(AuthProvider);
 
     // use navigate
 
@@ -31,6 +31,11 @@ const Login = () => {
                 const errorMessage = error.message;
             });
 
+    }
+
+    // google login 
+    const googlelogin=()=>{
+        googleLogin()
     }
 
    
@@ -67,7 +72,7 @@ const Login = () => {
                                     </div>
 
                                     <div className="social-login">
-                                        <button><FaGoogle></FaGoogle><span className='ms-3'>GOOGLE SING UP</span></button>
+                                        <button  onClick={googlelogin}><FaGoogle></FaGoogle><span className='ms-3'>GOOGLE SING UP</span></button>
                                     </div>
 
                                     <div className="forget">

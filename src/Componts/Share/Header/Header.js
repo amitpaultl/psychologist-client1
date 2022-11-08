@@ -10,7 +10,6 @@ import './Header.css'
 const Header = () => {
     const { logOut, user } = useContext(AuthProvider)
 
-console.log(user);
 
     // log out
     const logout = () => {
