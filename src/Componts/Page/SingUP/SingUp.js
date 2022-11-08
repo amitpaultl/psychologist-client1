@@ -21,6 +21,8 @@ const SingUp = () => {
 
         // email sing in
         emailhandaler(email,password)
+        // form reset
+        e.target.reset()
     }
 
     // email sing in
@@ -30,6 +32,7 @@ const SingUp = () => {
             // Signed in 
             const user = userCredential.user;
             toast.success('Successfully Sign Up')
+            
         })
         .catch((error) => {
             toast.error('Sing Up Fall')

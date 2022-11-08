@@ -30,12 +30,15 @@ const Login = () => {
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
-                // navigate('/');
+               
+                // form reset
+                e.target.reset()
                 navigate(from,{replace:true})
             })
             .catch((error) => {
                 const errorMessage = error.message;
                 toast.error(errorMessage)
+                
             });
 
     }

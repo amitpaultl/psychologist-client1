@@ -1,7 +1,7 @@
 import React from 'react';
 import './Dasbord.css'
 import Form from 'react-bootstrap/Form';
-import { ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 const Dasbord = () => {
 
     // service handaler
@@ -20,7 +20,20 @@ const Dasbord = () => {
             details:details
         }
 
-
+        fetch(`http://localhost:5000/service`,{
+            method: "POST",
+            headers: {
+              "content-type": "application/json"
+            },
+            body: JSON.stringify(service)
+        })
+        .then(res =>res.json())
+        .then(data => {
+            if(data.success){
+                toast.success(data.message)
+            }
+            e.target.reset()
+        })
        
     }
 
