@@ -1,7 +1,30 @@
 import React from 'react';
 import './Dasbord.css'
 import Form from 'react-bootstrap/Form';
+import { ToastContainer } from 'react-toastify';
 const Dasbord = () => {
+
+    // service handaler
+    const handalerservice = (e)=>{
+        e.preventDefault();
+        const common = e.target;
+        const title = common.title.value;
+        const price = common.price.value;
+        const url = common.url.value;
+        const details = common.details.value;
+
+        const service ={
+            title:title,
+            price:price,
+            url:url,
+            details:details
+        }
+
+
+       
+    }
+
+
     return (
         <section className='dasbord-area'>
 
@@ -14,18 +37,18 @@ const Dasbord = () => {
                                 <div className="title-login text-center">
                                     <h2>ADD SERVICE</h2>
                                 </div>
-                                <form>
+                                <form onSubmit={handalerservice}>
                                     <div className="input-form">
                                         <input type="text" name='title' placeholder='Title Name' />
                                     </div>
                                     <div className="input-form">
-                                        <input type="text" name='title' placeholder='Price' />
+                                        <input type="text" name='price' placeholder='Price' />
                                     </div>
                                     <div className="input-form">
-                                        <input type="text" placeholder='Image Url' />
+                                        <input type="text" name='url' placeholder='Image Url' />
                                     </div>
                                     <div className="input-form">
-                                    <Form.Control as="textarea" placeholder='Details' rows={6} />
+                                    <Form.Control as="textarea" name='details' placeholder='Details' rows={6} />
                                     </div>
 
                                     <button className='submit' type='submit'>SUMBIT</button>
@@ -36,6 +59,7 @@ const Dasbord = () => {
                     
                 </div>
             </div>
+            <ToastContainer />
         </section>
     );
 };
