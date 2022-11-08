@@ -1,9 +1,13 @@
 import React from 'react';
 
 const SingleService = () => {
+
+
     return (
         <div>
+            <div className="container">
             
+            </div>
         </div>
     );
 };

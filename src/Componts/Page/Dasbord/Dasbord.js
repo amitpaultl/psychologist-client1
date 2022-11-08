@@ -17,7 +17,8 @@ const Dasbord = () => {
             title:title,
             price:price,
             url:url,
-            details:details
+            details:details,
+            retting :[]
         }
 
         fetch(`http://localhost:5000/service`,{

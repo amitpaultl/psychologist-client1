@@ -28,7 +28,7 @@ const ServiceHome = () => {
                         ></ServicePopus>)
                     }
                     <div className="sengle-srivice-text text-center mt-4">
-                        <Link to={'/singleService'}>SEE ALL SERVICE</Link>
+                        <Link to={'/service'}>SEE ALL SERVICE</Link>
                     </div>
                 </div>
             </div>
