@@ -1,13 +1,18 @@
 import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle } from "react-icons/fa";
 import { AuthProvider } from '../../Context/AuthContext';
 const Login = () => {
     // contex api
     const { loginemail,googleLogin } = useContext(AuthProvider);
 
-    // use navigate
+    // location
+    const location = useLocation();
 
+    // location navigete
+    const from = location.state?.from?.pathname || '/';
+
+    // use navigate
     const navigate = useNavigate()
 
 
@@ -24,7 +29,8 @@ const Login = () => {
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
-                navigate('/');
+                // navigate('/');
+                navigate(from,{replace:true})
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -36,6 +42,7 @@ const Login = () => {
     // google login 
     const googlelogin=()=>{
         googleLogin()
+        navigate(from,{replace:true})
     }
 
    

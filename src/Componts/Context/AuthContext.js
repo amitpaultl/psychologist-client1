@@ -7,6 +7,9 @@ const auth = getAuth(app);
 
 const AuthContext = ({children}) => {
 
+    // loding 
+    const [loader ,setLoader] = useState(true)
+
     // current user
     const [user, setuser] = useState()
 
@@ -15,21 +18,25 @@ const AuthContext = ({children}) => {
 
     // email password login
     const emailLogin =(email,password)=>{
+        setLoader(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     // google login 
     const googlesingup = ()=>{
+        setLoader(true)
         return signInWithPopup(auth, provider)
     }
 
     // login email 
     const loginemail =( email, password)=>{
+        setLoader(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     // login google
     const googleLogin = ()=>{
+        setLoader(true)
         return signInWithRedirect(auth, provider);
     }
 
@@ -41,20 +48,16 @@ const AuthContext = ({children}) => {
     // current user 
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, (crentuser) => {
-          
                 setuser(crentuser)
-                
-          
-            // setLoader(false)
+                setLoader(false)
           });
-
           return () =>{
             unsubscribe();
           }
     },[])
 
     // context pass 
-    const authinfo ={emailLogin,googlesingup,logOut,user,loginemail,googleLogin}
+    const authinfo ={emailLogin,googlesingup,logOut,user,loginemail,googleLogin,loader}
 
     return (
         <AuthProvider.Provider value={authinfo}>
