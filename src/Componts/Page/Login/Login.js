@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle } from "react-icons/fa";
 import { AuthProvider } from '../../Context/AuthContext';
+import { toast, ToastContainer } from 'react-toastify';
 const Login = () => {
     // contex api
     const { loginemail,googleLogin } = useContext(AuthProvider);
@@ -33,8 +34,8 @@ const Login = () => {
                 navigate(from,{replace:true})
             })
             .catch((error) => {
-                const errorCode = error.code;
                 const errorMessage = error.message;
+                toast.error(errorMessage)
             });
 
     }
@@ -91,6 +92,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };

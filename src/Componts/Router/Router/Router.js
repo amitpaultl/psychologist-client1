@@ -7,6 +7,7 @@ import SingUp from "../../Page/SingUP/SingUp";
 import Dasbord from "../../Page/Dasbord/Dasbord";
 import SingleService from "../../Page/SingleService/SingleService";
 import Blog from "../../Page/Blog/Blog";
+import PrivateRouter from "../PrivateRouter/PrivateRouter";
 
 export const router = createBrowserRouter([
     {
@@ -27,7 +28,7 @@ export const router = createBrowserRouter([
         },
         {
             path:'/dasbord',
-            element:<Dasbord></Dasbord>
+            element:<PrivateRouter><Dasbord></Dasbord></PrivateRouter>
         },
         {
             path:'/blog',
