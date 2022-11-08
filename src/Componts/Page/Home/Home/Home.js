@@ -29,13 +29,34 @@ const Home = () => {
                         <div className="col-md-3 ">
                             <div className="single-offer">
                                 <img className='offer-img' src="https://html.modernwebtemplates.com/psychologist/images/service-icons/mental.png" alt="" />
-                                <h4>RELATIONSHIP</h4>
-                                <p>A therapy that helps establish a more profound ground for healthy relationship.</p>
+                                <h4>MENTAL HEALTH</h4>
+                                <p>Improve your focus, relieve stress and anxiety, and develop creativity.</p>
                             </div>
                         </div>
                         <div className="col-md-3 ">
                             <div className="single-offer">
                                 <img className='offer-img' src="https://html.modernwebtemplates.com/psychologist/images/service-icons/feelings.png" alt="" />
+                                <h4>FEELINGS</h4>
+                                <p>Achieve a better level of your well-being and the ability to manage feelings.</p>
+                            </div>
+                        </div>
+                        <div className="col-md-3 ">
+                            <div className="single-offer">
+                                <img className='offer-img' src="https://html.modernwebtemplates.com/psychologist/images/service-icons/meditation.png" alt="" />
+                                <h4>MEDITATION</h4>
+                                <p>A therapy that helps establish a more profound ground for healthy relationship.</p>
+                            </div>
+                        </div>
+                        <div className="col-md-3 ">
+                            <div className="single-offer">
+                                <img className='offer-img' src="https://html.modernwebtemplates.com/psychologist/images/service-icons/depression.png" alt="" />
+                                <h4>RELATIONSHIP</h4>
+                                <p>Learn how to deal with difficult emotions and feelings by using healthy strategies.</p>
+                            </div>
+                        </div>
+                        <div className="col-md-3 ">
+                            <div className="single-offer">
+                                <img className='offer-img' src="https://html.modernwebtemplates.com/psychologist/images/service-icons/conflicting.png" alt="" />
                                 <h4>RELATIONSHIP</h4>
                                 <p>A therapy that helps establish a more profound ground for healthy relationship.</p>
                             </div>
@@ -43,36 +64,15 @@ const Home = () => {
                         <div className="col-md-3 ">
                             <div className="single-offer">
                                 <img className='offer-img' src="https://html.modernwebtemplates.com/psychologist/images/service-icons/relationship.png" alt="" />
-                                <h4>RELATIONSHIP</h4>
-                                <p>A therapy that helps establish a more profound ground for healthy relationship.</p>
+                                <h4>MIND GAMES</h4>
+                                <p>It is crucial to understand how to prevent others from playing such games with you.</p>
                             </div>
                         </div>
                         <div className="col-md-3 ">
                             <div className="single-offer">
-                                <img className='offer-img' src="https://html.modernwebtemplates.com/psychologist/images/service-icons/relationship.png" alt="" />
-                                <h4>RELATIONSHIP</h4>
-                                <p>A therapy that helps establish a more profound ground for healthy relationship.</p>
-                            </div>
-                        </div>
-                        <div className="col-md-3 ">
-                            <div className="single-offer">
-                                <img className='offer-img' src="https://html.modernwebtemplates.com/psychologist/images/service-icons/relationship.png" alt="" />
-                                <h4>RELATIONSHIP</h4>
-                                <p>A therapy that helps establish a more profound ground for healthy relationship.</p>
-                            </div>
-                        </div>
-                        <div className="col-md-3 ">
-                            <div className="single-offer">
-                                <img className='offer-img' src="https://html.modernwebtemplates.com/psychologist/images/service-icons/relationship.png" alt="" />
-                                <h4>RELATIONSHIP</h4>
-                                <p>A therapy that helps establish a more profound ground for healthy relationship.</p>
-                            </div>
-                        </div>
-                        <div className="col-md-3 ">
-                            <div className="single-offer">
-                                <img className='offer-img' src="https://html.modernwebtemplates.com/psychologist/images/service-icons/relationship.png" alt="" />
-                                <h4>RELATIONSHIP</h4>
-                                <p>A therapy that helps establish a more profound ground for healthy relationship.</p>
+                                <img className='offer-img' src="https://html.modernwebtemplates.com/psychologist/images/service-icons/mind.png" alt="" />
+                                <h4>FEELINGS</h4>
+                                <p>Achieve a better level of your well-being and the ability to manage feelings.</p>
                             </div>
                         </div>
                     </div>
