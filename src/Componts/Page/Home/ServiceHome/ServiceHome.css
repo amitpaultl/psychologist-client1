@@ -1,0 +1,44 @@
+.service-area{
+    padding: 50px 0;
+}
+
+img.home-servic-img {
+    width: 100%;
+}
+
+.sengle-srivice h4 {
+    font-size: 21px;
+    color: #91d0cc;
+}
+
+.sengle-srivice {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    box-shadow: 0px 2px 20px rgb(0 0 0 / 10%);
+    padding-bottom: 31px;
+}
+
+.sengle-srivice-text {
+    padding: 14px 23px;
+}
+
+.sengle-srivice-text h2 {font-weight: 700;margin: 16px 0;}
+
+.sengle-srivice-text p {
+    font-size: 17px;
+    color: #787878;
+    margin-bottom: 35px;
+}
+
+.sengle-srivice-text a {
+    font-size: 18px;
+    text-decoration: none;
+    background: aquamarine;
+    padding: 11px 24px;
+    color: #000;
+    border-radius: 5px;
+}
+
+.sengle-srivice-text a:hover {
+    background: #309f7a;
+}
