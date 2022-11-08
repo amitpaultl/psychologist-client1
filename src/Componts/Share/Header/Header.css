@@ -1,0 +1,36 @@
+/* logo */
+
+a.logo {
+    color: #91d0cc;
+    font-size: 36px;
+    word-break: break-word;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    text-decoration: none;
+}
+
+a.logo:hover{
+    color: #91d0cc;
+}
+
+/* menu */
+
+.menu-area a {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: left;
+    color: #444444;
+    margin: 0px 10px;
+}
+
+.menu-area a:hover{
+    color: #91d0cc;
+} 
+
+.menu-area a.active{
+    color: #91d0cc;
+}
+
+
