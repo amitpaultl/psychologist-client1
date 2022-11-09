@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import Form from 'react-bootstrap/Form';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 // import { ToastContainer } from 'react-toastify';
 
 const UpdateReview = () => {
@@ -10,6 +10,9 @@ const UpdateReview = () => {
 
     // default value set
     const [product, setProduct] = useState()
+
+    // navigate
+    const navigate = useNavigate()
 
     // default value
 
@@ -24,9 +27,30 @@ const UpdateReview = () => {
     const updatehandaler = (e) =>{
         e.preventDefault();
         const common = e.target.review.value;
-        console.log(common);
+        const update = {
+            review:common
+        }
+
+        fetch(`http://localhost:5000/review/${id}`, {
+            method: "PATCH",
+            headers: {
+              "content-type": "application/json"
+            },
+            body: JSON.stringify(update)
+          }).then(res => res.json())
+          .then(data => {
+            if(data.success){
+              toast.success(data.message);
+              navigate("/review")
+            } else {
+              toast.err(data.error)
+            }
+          })
+          .catch(err => toast.error(err.message))
 
     }
+
+    // console.log(product.review);
 
     return (
         <section className='dasbord-area'>
@@ -42,7 +66,7 @@ const UpdateReview = () => {
                                 </div>
                                 <form onSubmit={updatehandaler}>
                                     <div className="input-form">
-                                        <Form.Control as="textarea" defaultValue={product.review} name='review' placeholder='Review Update' rows={6} />
+                                        <Form.Control as="textarea" defaultValue={product?.review} name='review' placeholder='Review Update' rows={6} />
                                     </div>
 
                                     <button className='submit' type='submit'>SUMBIT</button>
