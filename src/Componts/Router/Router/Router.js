@@ -9,6 +9,7 @@ import SingleService from "../../Page/SingleService/SingleService";
 import Blog from "../../Page/Blog/Blog";
 import PrivateRouter from "../PrivateRouter/PrivateRouter";
 import Review from "../../Page/Review/Review";
+import UpdateReview from "../../Page/Blog/UpdateReview/UpdateReview";
 
 export const router = createBrowserRouter([
     {
@@ -42,6 +43,10 @@ export const router = createBrowserRouter([
         {
             path:'/singleService/:id',
             element:<SingleService></SingleService>
+        },
+        {
+            path:'/update/:id',
+            element:<PrivateRouter><UpdateReview></UpdateReview></PrivateRouter> 
         },
         {
             path:'/login',

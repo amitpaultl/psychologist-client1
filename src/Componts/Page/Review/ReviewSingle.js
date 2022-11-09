@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 
 const ReviewSingle = ({reating,refresh,setRefresh}) => {
     const {review,product,_id} = reating
+    const negative = useNavigate()
     // deletehandaler
     const deletehandaler =(id)=>{
         fetch(`http://localhost:5000/review/${id}`, {
@@ -20,6 +22,12 @@ const ReviewSingle = ({reating,refresh,setRefresh}) => {
             }
           }).catch(err => toast.error(err.message))
     }
+
+
+    // updatehandale
+    const updatehandale =(id)=>{
+        negative(`/update/${id}`)
+    }
     return (
         <div className='col-md-4'>
             <div className="sengle-srivice mt-4">
@@ -32,7 +40,7 @@ const ReviewSingle = ({reating,refresh,setRefresh}) => {
                     <h2>{product?.title}</h2>
                     <p>{review}</p>
                    <button onClick={()=>deletehandaler(_id)} className='review-but'>Delete</button>
-                   <button className='review-but'>Edit</button>
+                   <button onClick={()=>updatehandale(_id)} className='review-but'>Edit</button>
                 </div>
 
             </div>
