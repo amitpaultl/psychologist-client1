@@ -1,0 +1,26 @@
+.blog-area{
+    padding: 80px 0;
+    font-family: 'Playfair Display', serif;
+    background: #caebe0;
+}
+
+.blog-page img {
+    width: 100%;
+}
+
+.blog-page {
+    background: aliceblue;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+}
+
+.blog-text h2 {
+    font-size: 27px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.blog-text {
+    padding: 18px 0;
+}

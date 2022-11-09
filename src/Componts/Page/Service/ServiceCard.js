@@ -10,7 +10,7 @@ const ServiceCard = ({service}) => {
                     <h4>Price : {service?.price}</h4>
                     <h2>{service?.title}</h2>
                     <p>{service?.details.length >= 100 ? service?.details.slice(0, 100) + '...' : service?.details}</p>
-                    <Link to={'/singleService'} >View All</Link>                    
+                    <Link to={`/singleService/${service._id}`} >View All</Link>                    
                 </div>
 
             </div>

@@ -1,0 +1,143 @@
+.single-page-area{
+    padding: 80px 0;
+    font-family: 'Playfair Display', serif;
+}
+
+.single-img{
+    width: 100%;
+}
+
+.single-text {
+    padding: 28px;
+    font-family: 'Playfair Display', serif;
+    background: aliceblue;
+}
+
+.single-text h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #91d0cc;
+}
+
+.single-text h2 {
+    font-size: 39px;
+    font-weight: 700;
+    margin: 20px 0 39px;
+}
+
+.single-text {
+    padding: 28px;
+    font-family: 'Playfair Display', serif;
+    background: aliceblue;
+}
+
+.single-text h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #91d0cc;
+}
+
+.single-text h2 {
+    font-size: 39px;
+    font-weight: 700;
+    margin: 20px 0 39px;
+}
+
+.review-user {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background: aliceblue;
+    padding: 11px;
+    border-radius: 7px;
+    margin-bottom: 25px;
+}
+
+.review-user img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+/* right side */
+
+.review-user p {
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+.comment-area h2 {
+    font-size: 29px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.single-text {
+    padding: 28px;
+    font-family: 'Playfair Display', serif;
+    background: aliceblue;
+}
+
+.single-text h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #91d0cc;
+}
+
+.single-text h2 {font-size: 39px;font-weight: 700;margin: 20px 0 39px;}
+
+.review-user {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background: aliceblue;
+    padding: 11px;
+    border-radius: 7px;
+    margin-bottom: 25px;
+}
+
+.review-user img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+.review-user p {
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+.comment-area h2 {
+    font-size: 29px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+
+.comment-submit {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    line-height: 46px;
+    z-index: 1;
+    transition: all .7s ease;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 400;
+    width: 100%;
+    margin-bottom: 15px;
+    background-image: linear-gradient(to bottom, #ffb400, #ff8a00);
+    margin-top: 26px;
+    border: none;
+}
+
+.comment-submit:hover {
+    border: 2px solid #ff8a00;
+    background-image: linear-gradient(to bottom, #1e152d, #150340);
+    color: #fff;
+    border: none;
+
+}
