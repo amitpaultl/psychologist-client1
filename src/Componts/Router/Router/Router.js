@@ -10,11 +10,13 @@ import Blog from "../../Page/Blog/Blog";
 import PrivateRouter from "../PrivateRouter/PrivateRouter";
 import Review from "../../Page/Review/Review";
 import UpdateReview from "../../Page/Blog/UpdateReview/UpdateReview";
+import Error from "../../Page/Error/Error";
 
 export const router = createBrowserRouter([
     {
         path:'/',
         element:<Root></Root>,
+        errorElement:<Error></Error>,
        children:[
         {
             path:'/',
