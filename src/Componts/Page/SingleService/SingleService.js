@@ -12,6 +12,10 @@ const SingleService = () => {
     const { id } = useParams()
     const [senglaServic, setSenglaService] = useState([])
 
+    // review all 
+    const [review, setreview] = useState([])
+
+    // nagivet0
     const nagivet = useNavigate()
 
     useEffect(() => {
@@ -20,43 +24,52 @@ const SingleService = () => {
             .then(data => setSenglaService(data.data))
     }, [])
 
+    //  // review all get 
+    useEffect(() => {
+        fetch(`http://localhost:5000/reviewdis?id=${id}`)
+            .then(res => res.json())
+            .then(data => setreview(data.data))
+    }, [])
+
+
+    console.log(review);
+
     // login handale
-    const loginHandaler =()=>{
+    const loginHandaler = () => {
         nagivet('/login')
     }
 
-    console.log(senglaServic);
 
     // comment handaler
 
-    const commentHandaler=(e)=>{
+    const commentHandaler = (e) => {
         e.preventDefault()
 
         const review = e.target.comment.value;
-        const comment ={
-            email:user.email,
-            review:review,
-            product : senglaServic
+        const comment = {
+            email: user.email,
+            review: review,
+            product: senglaServic
         }
 
-        fetch(`http://localhost:5000/review`,{
+        fetch(`http://localhost:5000/review`, {
             method: "POST",
             headers: {
-              "content-type": "application/json"
+                "content-type": "application/json"
             },
             body: JSON.stringify(comment)
         })
-        .then(res =>res.json())
-        .then(data => {
-            if(data.success){
-                toast.success(data.message)
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    toast.success(data.message)
+                    e.target.reset()
+                }
                 e.target.reset()
-            }
-            e.target.reset()
-        })
+            })
 
 
-        
+
     }
 
     return (
@@ -76,10 +89,16 @@ const SingleService = () => {
                     <div className="col-md-4">
                         <div className="comment-area">
                             <h2>All Review</h2>
-                            <div className="review-user">
-                                <img src="https://html.modernwebtemplates.com/psychologist/images/faces/02.jpg" alt="" />
-                                <p > Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                            </div>
+                            {
+                                review.map(reating =>
+
+                                    <div key={reating._id}  className="review-user">
+                                        <img src="https://html.modernwebtemplates.com/psychologist/images/faces/02.jpg" alt="" />
+                                        <p >{reating.review}</p>
+                                    </div>
+                                )
+                            }
+
                             <div className="comment-form">
 
                                 {
@@ -91,7 +110,7 @@ const SingleService = () => {
                                     </form> : <button onClick={loginHandaler} className='comment-submit'>LOGIN</button>
                                 }
 
-                                
+
                             </div>
                         </div>
                     </div>

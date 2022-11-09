@@ -90,7 +90,7 @@
 .review-user {
     display: flex;
     align-content: center;
-    justify-content: center;
+    justify-content: space-between;
     background: aliceblue;
     padding: 11px;
     border-radius: 7px;

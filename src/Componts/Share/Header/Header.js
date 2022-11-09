@@ -50,7 +50,7 @@ const Header = () => {
 
                                 {
                                     user ? <>
-                                    <Nav><NavLink to={'/review'}>Review</NavLink></Nav>
+                                    <Nav><NavLink to={'/review'}>My Review</NavLink></Nav>
                                     <Nav><NavLink onClick={logout}>Logout</NavLink></Nav>
                                      </>
                                         :

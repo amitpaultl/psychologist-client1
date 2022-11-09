@@ -18,16 +18,17 @@ const Review = () => {
         .then(data => setReview(data.data))
     },[refresh])
 
-
+console.log(reviews);
 
     return (
         <div className='review-area'>
             <div className="container">
                 <div className="row">
-
                     {
-                        reviews.map(reating => <ReviewSingle refresh={refresh} setRefresh={setRefresh} reating={reating} key={reating._id} ></ReviewSingle>)
+                        reviews.length === 0 ? <h1 className='text-center'>No reviews were added</h1> : reviews.map(reating => <ReviewSingle refresh={refresh} setRefresh={setRefresh} reating={reating} key={reating._id} ></ReviewSingle>)  
                     }
+
+                  
                     
                 </div>
             </div>
