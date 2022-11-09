@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle } from "react-icons/fa";
 import { AuthProvider } from '../../Context/AuthContext';
 import { toast, ToastContainer } from 'react-toastify';
+import useTitle from '../../Usehook/Usetitle';
 const Login = () => {
     // contex api
     const { loginemail,googleLogin } = useContext(AuthProvider);
@@ -16,6 +17,8 @@ const Login = () => {
     // use navigate
     const navigate = useNavigate()
 
+    // title
+    useTitle('Login')
 
 
     // email handaler

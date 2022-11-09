@@ -2,7 +2,11 @@ import React from 'react';
 import './Dasbord.css'
 import Form from 'react-bootstrap/Form';
 import { toast, ToastContainer } from 'react-toastify';
+import useTitle from '../../Usehook/Usetitle';
 const Dasbord = () => {
+
+    //title
+    useTitle('Add service')
 
     // service handaler
     const handalerservice = (e)=>{

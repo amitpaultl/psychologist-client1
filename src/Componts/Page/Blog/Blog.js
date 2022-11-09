@@ -1,7 +1,10 @@
 import React from 'react';
+import useTitle from '../../Usehook/Usetitle';
 import './Blog.css'
 
 const Blog = () => {
+        //title
+        useTitle('Blog')
     return (
         <div className='blog-area'>
             <div className="container">

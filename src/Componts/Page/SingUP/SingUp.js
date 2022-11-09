@@ -6,10 +6,14 @@ import { AuthProvider } from '../../Context/AuthContext';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useTitle from '../../Usehook/Usetitle';
 
 const SingUp = () => {
     // email sing up
     const {emailLogin,googlesingup} = useContext(AuthProvider);
+
+    // title 
+    useTitle('Sing up')
 
     // email handaler
     const handaleremail = (e)=>{

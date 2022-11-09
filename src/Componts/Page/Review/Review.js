@@ -2,8 +2,11 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthProvider } from '../../Context/AuthContext';
 import ReviewSingle from './ReviewSingle';
 import './Review.css'
+import useTitle from '../../Usehook/Usetitle';
 
 const Review = () => {
+        //title
+        useTitle('My Review')
     const { user } = useContext(AuthProvider)
     const {email} = user
 

@@ -2,8 +2,11 @@ import React from 'react';
 import './Home.css'
 import { FaHandshake } from "react-icons/fa";
 import ServiceHome from '../ServiceHome/ServiceHome';
+import useTitle from '../../../Usehook/Usetitle';
 
 const Home = () => {
+    // title
+    useTitle('Home')
     return (
         <div>
             {/* hero area */}
