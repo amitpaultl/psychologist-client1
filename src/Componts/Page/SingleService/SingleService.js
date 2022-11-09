@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import './SingleService.css'
 import { AuthProvider } from '../../Context/AuthContext';
 import PrivateRouter from '../../Router/PrivateRouter/PrivateRouter';
+import { toast, ToastContainer } from 'react-toastify';
 
 const SingleService = () => {
     const { user } = useContext(AuthProvider)
@@ -18,11 +19,44 @@ const SingleService = () => {
             .then(res => res.json())
             .then(data => setSenglaService(data.data))
     }, [])
+
+    // login handale
+    const loginHandaler =()=>{
+        nagivet('/login')
+    }
+
     console.log(senglaServic);
 
+    // comment handaler
 
-    const loginHandaler =()=>{
-        <PrivateRouter></PrivateRouter>
+    const commentHandaler=(e)=>{
+        e.preventDefault()
+
+        const review = e.target.comment.value;
+        const comment ={
+            email:user.email,
+            review:review,
+            product : senglaServic
+        }
+
+        fetch(`http://localhost:5000/review`,{
+            method: "POST",
+            headers: {
+              "content-type": "application/json"
+            },
+            body: JSON.stringify(comment)
+        })
+        .then(res =>res.json())
+        .then(data => {
+            if(data.success){
+                toast.success(data.message)
+                e.target.reset()
+            }
+            e.target.reset()
+        })
+
+
+        
     }
 
     return (
@@ -49,8 +83,8 @@ const SingleService = () => {
                             <div className="comment-form">
 
                                 {
-                                    user ? <form>
-                                        <Form.Control as="textarea" name='details' placeholder='Details' rows={3} />
+                                    user ? <form onSubmit={commentHandaler}>
+                                        <Form.Control as="textarea" name='comment' placeholder='Comment' rows={3} />
 
                                         <input type="submit" className='comment-submit' value={'SIBMIT'} />
 
@@ -63,6 +97,7 @@ const SingleService = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };

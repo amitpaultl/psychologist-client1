@@ -1,0 +1,16 @@
+.review-area{
+    padding: 80px 0;
+}
+
+button.review-but {
+    padding: 4px 15px;
+    margin: 0 11px;
+    border-radius: 12px;
+    background: aquamarine;
+    border: none;
+}
+
+button.review-but:hover {
+    background: #07076a;
+    color: #fff;
+}

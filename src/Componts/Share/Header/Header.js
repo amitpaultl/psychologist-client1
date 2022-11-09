@@ -49,7 +49,10 @@ const Header = () => {
                                 <Nav><NavLink to={'/dasbord'}>Add Service</NavLink></Nav>
 
                                 {
-                                    user ? <Nav><NavLink onClick={logout}>Logout</NavLink></Nav>
+                                    user ? <>
+                                    <Nav><NavLink to={'/review'}>Review</NavLink></Nav>
+                                    <Nav><NavLink onClick={logout}>Logout</NavLink></Nav>
+                                     </>
                                         :
                                         <>
                                             <Nav><NavLink to={'/login'}>Login</NavLink></Nav>

@@ -8,6 +8,7 @@ import Dasbord from "../../Page/Dasbord/Dasbord";
 import SingleService from "../../Page/SingleService/SingleService";
 import Blog from "../../Page/Blog/Blog";
 import PrivateRouter from "../PrivateRouter/PrivateRouter";
+import Review from "../../Page/Review/Review";
 
 export const router = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
         {
             path:'/blog',
             element:<Blog></Blog>
+        },
+        {
+            path:'/review',
+            element:<PrivateRouter><Review></Review></PrivateRouter> 
         },
         {
             path:'/singleService/:id',

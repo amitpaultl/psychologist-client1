@@ -18,6 +18,11 @@ img.home-servic-img {
     padding-bottom: 31px;
 }
 
+.sengle-srivice img {
+    height: 239px;
+    cursor: pointer;
+}
+
 .sengle-srivice-text {
     padding: 14px 23px;
 }

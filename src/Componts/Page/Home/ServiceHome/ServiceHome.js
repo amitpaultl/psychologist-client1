@@ -12,7 +12,6 @@ const ServiceHome = () => {
             .then(data => setService(data.data))
     }, [])
 
-    console.log(service);
     return (
         <div className='service-area'>
             <div className="container">

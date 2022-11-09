@@ -10,6 +10,8 @@ const Service = () => {
             .then(res => res.json())
             .then(data => setService(data.data))
     }, [])
+
+
     return (
         <div className='py-5'>
             <div className="container">
