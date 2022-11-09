@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css'
 import { FaHandshake } from "react-icons/fa";
 import ServiceHome from '../ServiceHome/ServiceHome';
+
 const Home = () => {
     return (
         <div>
@@ -15,6 +16,9 @@ const Home = () => {
 
             {/* service area */}
             <ServiceHome></ServiceHome>
+
+          
+
             {/* offer area */}
             <section className="offer-area">
                 <div className="title-area text-center">
@@ -88,9 +92,9 @@ const Home = () => {
                     <div className="row align-items-center">
                         <div className="col-md-6 image-wel">
                             <div className="welcome-image">
-                                
+
                                 <img src="https://html.modernwebtemplates.com/psychologist/images/person.png" alt="" />
-                                
+
                             </div>
                         </div>
                         <div className="col-md-6">

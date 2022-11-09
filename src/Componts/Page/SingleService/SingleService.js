@@ -1,12 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 
 import './SingleService.css'
+import { AuthProvider } from '../../Context/AuthContext';
+import PrivateRouter from '../../Router/PrivateRouter/PrivateRouter';
 
 const SingleService = () => {
+    const { user } = useContext(AuthProvider)
     const { id } = useParams()
     const [senglaServic, setSenglaService] = useState([])
+
+    const nagivet = useNavigate()
 
     useEffect(() => {
         fetch(`http://localhost:5000/serviceall/${id}`)
@@ -14,6 +19,11 @@ const SingleService = () => {
             .then(data => setSenglaService(data.data))
     }, [])
     console.log(senglaServic);
+
+
+    const loginHandaler =()=>{
+        <PrivateRouter></PrivateRouter>
+    }
 
     return (
         <div className='single-page-area'>
@@ -37,13 +47,17 @@ const SingleService = () => {
                                 <p > Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
                             </div>
                             <div className="comment-form">
-                                <form>
-                                    <Form.Control as="textarea" name='details' placeholder='Details' rows={3} />
 
-                                    <input type="submit" className='comment-submit' value={'SIBMIT'} />
+                                {
+                                    user ? <form>
+                                        <Form.Control as="textarea" name='details' placeholder='Details' rows={3} />
 
-                                </form>
-                                <button className='comment-submit'>LOGIN</button>
+                                        <input type="submit" className='comment-submit' value={'SIBMIT'} />
+
+                                    </form> : <button onClick={loginHandaler} className='comment-submit'>LOGIN</button>
+                                }
+
+                                
                             </div>
                         </div>
                     </div>
