@@ -33,4 +33,14 @@ a.logo:hover{
     color: #91d0cc;
 }
 
-
+/* responsive */
+@media (max-width: 991.98px) { 
+    .clopes {
+        display: block;
+    }    
+    .clopes .navbar-nav a{
+        text-align: center;
+        border: 1px solid;
+        margin-bottom: 10px;
+    }
+  }

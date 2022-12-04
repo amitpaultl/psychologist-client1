@@ -25,7 +25,7 @@ const Dasbord = () => {
             retting :[]
         }
 
-        fetch(`http://localhost:5000/service`,{
+        fetch(`https://psychol-server.vercel.app/service`,{
             method: "POST",
             headers: {
               "content-type": "application/json"
@@ -49,7 +49,7 @@ const Dasbord = () => {
             <div className='container'>
                
                 <div className="row">
-                    <div className="col-md-6 offset-md-3">
+                    <div className="col-lg-6 offset-lg-3 col-md-12">
                         <div className="bg-login">
                             <div className="singForm">
                                 <div className="title-login text-center">

@@ -9,14 +9,14 @@ const Service = () => {
     const [service, setService] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/serviceall`)
+        fetch(`https://psychol-server.vercel.app/serviceall`)
             .then(res => res.json())
             .then(data => setService(data.data))
     }, [])
 
 
     return (
-        <div className='py-5'>
+        <div className='py-5 ' style={{ backgroundColor: '#caebe0' }}>
             <div className="container">
                 <div className="row">
                     <div className="title-area text-center">

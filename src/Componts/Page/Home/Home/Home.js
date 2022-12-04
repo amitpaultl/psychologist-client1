@@ -30,56 +30,56 @@ const Home = () => {
                 </div>
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-3 ">
+                        <div className="col-md-6 col-lg-3 ">
                             <div className="single-offer">
                                 <img className='offer-img' src="https://html.modernwebtemplates.com/psychologist/images/service-icons/relationship.png" alt="" />
                                 <h4>RELATIONSHIP</h4>
                                 <p>A therapy that helps establish a more profound ground for healthy relationship.</p>
                             </div>
                         </div>
-                        <div className="col-md-3 ">
+                        <div className="col-md-6 col-lg-3 ">
                             <div className="single-offer">
                                 <img className='offer-img' src="https://html.modernwebtemplates.com/psychologist/images/service-icons/mental.png" alt="" />
                                 <h4>MENTAL HEALTH</h4>
                                 <p>Improve your focus, relieve stress and anxiety, and develop creativity.</p>
                             </div>
                         </div>
-                        <div className="col-md-3 ">
+                        <div className="col-md-6 col-lg-3 ">
                             <div className="single-offer">
                                 <img className='offer-img' src="https://html.modernwebtemplates.com/psychologist/images/service-icons/feelings.png" alt="" />
                                 <h4>FEELINGS</h4>
                                 <p>Achieve a better level of your well-being and the ability to manage feelings.</p>
                             </div>
                         </div>
-                        <div className="col-md-3 ">
+                        <div className="col-md-6 col-lg-3 ">
                             <div className="single-offer">
                                 <img className='offer-img' src="https://html.modernwebtemplates.com/psychologist/images/service-icons/meditation.png" alt="" />
                                 <h4>MEDITATION</h4>
                                 <p>A therapy that helps establish a more profound ground for healthy relationship.</p>
                             </div>
                         </div>
-                        <div className="col-md-3 ">
+                        <div className="col-md-6 col-lg-3 ">
                             <div className="single-offer">
                                 <img className='offer-img' src="https://html.modernwebtemplates.com/psychologist/images/service-icons/depression.png" alt="" />
                                 <h4>RELATIONSHIP</h4>
                                 <p>Learn how to deal with difficult emotions and feelings by using healthy strategies.</p>
                             </div>
                         </div>
-                        <div className="col-md-3 ">
+                        <div className="col-md-6 col-lg-3 ">
                             <div className="single-offer">
                                 <img className='offer-img' src="https://html.modernwebtemplates.com/psychologist/images/service-icons/conflicting.png" alt="" />
                                 <h4>RELATIONSHIP</h4>
                                 <p>A therapy that helps establish a more profound ground for healthy relationship.</p>
                             </div>
                         </div>
-                        <div className="col-md-3 ">
+                        <div className="col-md-6 col-lg-3 ">
                             <div className="single-offer">
                                 <img className='offer-img' src="https://html.modernwebtemplates.com/psychologist/images/service-icons/relationship.png" alt="" />
                                 <h4>MIND GAMES</h4>
                                 <p>It is crucial to understand how to prevent others from playing such games with you.</p>
                             </div>
                         </div>
-                        <div className="col-md-3 ">
+                        <div className="col-md-6 col-lg-3 ">
                             <div className="single-offer">
                                 <img className='offer-img' src="https://html.modernwebtemplates.com/psychologist/images/service-icons/mind.png" alt="" />
                                 <h4>FEELINGS</h4>
@@ -93,14 +93,14 @@ const Home = () => {
             <section className='welcome-area'>
                 <div className="container">
                     <div className="row align-items-center">
-                        <div className="col-md-6 image-wel">
+                        <div className="col-lg-6 col-md-12 image-wel">
                             <div className="welcome-image">
 
                                 <img src="https://html.modernwebtemplates.com/psychologist/images/person.png" alt="" />
 
                             </div>
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-lg-6 col-md-12">
                             <div className="welcome-text">
                                 <h4>Welcome to Psychologist & Family Consulting</h4>
                                 <h5>It's my goal to create a comfortable, safe environment, where we'll work to achieve the goal together.</h5>

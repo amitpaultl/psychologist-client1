@@ -6,10 +6,13 @@ import { toast, ToastContainer } from 'react-toastify';
 
 const ReviewSingle = ({reating,refresh,setRefresh}) => {
     const {review,product,_id} = reating
+
+    console.log(reating);
+
     const negative = useNavigate()
     // deletehandaler
     const deletehandaler =(id)=>{
-        fetch(`http://localhost:5000/review/${id}`, {
+        fetch(`https://psychol-server.vercel.app/review/${id}`, {
             method: "DELETE",
           })
           .then(res => res.json())
@@ -29,16 +32,16 @@ const ReviewSingle = ({reating,refresh,setRefresh}) => {
         negative(`/update/${id}`)
     }
     return (
-        <div className='col-md-4'>
-            <div className="sengle-srivice mt-4">
+        <div className='col-md-12'>
+            <div className="single-review">
                 <PhotoProvider>
                     <PhotoView src={product?.url}>
-                        <img className='w-100' src={product?.url}  alt="" />
+                        <img className=' review-img'  src={product?.url}  alt="" />
                     </PhotoView>
                 </PhotoProvider>
-                <div className="sengle-srivice-text">
                     <h2>{product?.title}</h2>
                     <p>{review}</p>
+                <div className="sengle-srivice-text">
                    <button onClick={()=>deletehandaler(_id)} className='review-but'>Delete</button>
                    <button onClick={()=>updatehandale(_id)} className='review-but'>Edit</button>
                 </div>

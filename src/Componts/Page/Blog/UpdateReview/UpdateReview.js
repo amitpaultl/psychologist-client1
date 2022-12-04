@@ -17,7 +17,7 @@ const UpdateReview = () => {
     // default value
 
     useEffect(() => {
-        fetch(`http://localhost:5000/review/${id}`)
+        fetch(`https://psychol-server.vercel.app/review/${id}`)
           .then((res) => res.json())
           .then(data => setProduct(data.data))
     }, []);
@@ -32,7 +32,7 @@ const UpdateReview = () => {
             review:common
         }
 
-        fetch(`http://localhost:5000/review/${id}`, {
+        fetch(`https://psychol-server.vercel.app/review/${id}`, {
             method: "PATCH",
             headers: {
               "content-type": "application/json"

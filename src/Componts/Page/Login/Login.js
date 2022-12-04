@@ -4,6 +4,7 @@ import { FaGoogle } from "react-icons/fa";
 import { AuthProvider } from '../../Context/AuthContext';
 import { toast, ToastContainer } from 'react-toastify';
 import useTitle from '../../Usehook/Usetitle';
+import { setAuthtoken } from '../../utilities/SetAuthToken';
 const Login = () => {
     // contex api
     const { loginemail,googleLogin } = useContext(AuthProvider);
@@ -33,9 +34,11 @@ const Login = () => {
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
-               
+                setAuthtoken(user)
+
                 // form reset
                 e.target.reset()
+
                 navigate(from,{replace:true})
             })
             .catch((error) => {
@@ -49,6 +52,7 @@ const Login = () => {
     // google login 
     const googlelogin=()=>{
         googleLogin()
+        
         navigate(from,{replace:true})
     }
 
@@ -59,13 +63,13 @@ const Login = () => {
             <div className="login-form">
                 <div className='container'>
                     <div className="row align-items-center">
-                        <div className="col-md-6">
+                        <div className="col-md-12 col-lg-12 col-xl-6">
                             <div className="sing-title login-p">
                                 <h2><span className='text-tran'>WELCOME</span> TO PSYCHOLOGIST </h2>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Ipsum has been the industry's standard dummy</p>
                             </div>
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-md-12 col-lg-12 col-xl-6">
                             <div className="bg-login">
                                 <div className="singForm">
                                     <div className="title-login text-center">

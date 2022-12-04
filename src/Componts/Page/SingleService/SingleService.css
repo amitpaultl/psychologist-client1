@@ -1,6 +1,7 @@
 .single-page-area{
     padding: 80px 0;
     font-family: 'Playfair Display', serif;
+    background: #caebe0;
 }
 
 .single-img{
@@ -140,4 +141,14 @@
     color: #fff;
     border: none;
 
+}
+.profile-img-comment {
+    width: 101px;
+}
+
+.profile-img-comment p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 900;
+    margin-bottom: 10px;
 }

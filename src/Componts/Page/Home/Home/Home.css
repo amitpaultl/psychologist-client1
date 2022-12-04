@@ -108,6 +108,8 @@ section.welcome-area {
     margin-top: -70px;
 }
 
+
+
 .welcome-text {
     text-align: center;
     font-family: 'Playfair Display', serif;
@@ -147,3 +149,27 @@ section.welcome-area {
 img.singe {
     margin: 10px 0;
 }
+
+/* responsive */
+@media (max-width: 1024.98px) { 
+    .welcome-image img {
+        margin-top: 22px;
+    }
+ }
+
+ @media (max-width: 768.98px) { 
+    .welcome-image img {
+        display: none;
+    }
+    .hero-text h2 {
+        font-size: 50px;
+    }
+  }
+
+  @media (min-width: 1024.98px) { 
+    .welcome-image img {
+        margin-top: 20px;
+    }
+
+   }
+

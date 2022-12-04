@@ -1,5 +1,29 @@
+
 .review-area{
     padding: 80px 0;
+    font-family: 'Playfair Display', serif;
+    background: #deebf6;
+}
+
+
+
+img.review-img {
+    width: 80px;
+}
+
+.single-review {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    border: 1px solid;
+    background: aliceblue;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.single-review h2 {
+    font-size: 20px;
 }
 
 button.review-but {
@@ -14,3 +38,13 @@ button.review-but:hover {
     background: #07076a;
     color: #fff;
 }
+
+@media (max-width: 991.98px) { 
+    .single-review {
+        display: block;
+        text-align: center;
+    }    
+    .single-review h2{
+        margin-top: 10px;
+    }
+  }

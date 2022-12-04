@@ -5,8 +5,8 @@ import 'react-photo-view/dist/react-photo-view.css';
 
 const ServicePopus = ({ service }) => {
     return (
-        <div className='col-md-4'>
-            <div className="sengle-srivice">
+        <div className='col-lg-4 col-md-6 '>
+            <div className="sengle-srivice mt-4">
                 <PhotoProvider>
                     <PhotoView src={service?.url}>
                         <img className='w-100' src={service?.url} alt="" />

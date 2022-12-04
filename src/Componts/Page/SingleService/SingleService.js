@@ -12,27 +12,31 @@ const SingleService = () => {
     const { id } = useParams()
     const [senglaServic, setSenglaService] = useState([])
 
+    // display comment no reload
+    const [reload, setRelpad]=useState(false)
     // review all 
-    const [review, setreview] = useState([])
+    const [review, setreview] = useState([]);
+    // const reverseReview = review.reverse()
+
 
     // nagivet0
     const nagivet = useNavigate()
 
     useEffect(() => {
-        fetch(`http://localhost:5000/serviceall/${id}`)
+        fetch(`https://psychol-server.vercel.app/serviceall/${id}`)
             .then(res => res.json())
-            .then(data => setSenglaService(data.data))
+            .then(data => setSenglaService(data?.data))
     }, [])
 
     //  // review all get 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviewdis?id=${id}`)
+        fetch(`https://psychol-server.vercel.app/reviewdis?id=${id}`)
             .then(res => res.json())
-            .then(data => setreview(data.data))
-    }, [])
+            .then(data => setreview(data?.data))
+    }, [reload])
 
 
-    console.log(review);
+    
 
     // login handale
     const loginHandaler = () => {
@@ -41,18 +45,19 @@ const SingleService = () => {
 
 
     // comment handaler
-
+console.log(user);
     const commentHandaler = (e) => {
         e.preventDefault()
 
         const review = e.target.comment.value;
         const comment = {
-            email: user.email,
+            email: user?.email,
             review: review,
-            product: senglaServic
+            product: senglaServic,
+            name: user?.displayName
         }
 
-        fetch(`http://localhost:5000/review`, {
+        fetch(`https://psychol-server.vercel.app/review`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -61,9 +66,10 @@ const SingleService = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.success) {
-                    toast.success(data.message)
-                    e.target.reset()
+                if (data?.success) {
+                    toast.success(data?.message)
+                    e.target.reset();
+                    setRelpad(!reload);
                 }
                 e.target.reset()
             })
@@ -92,9 +98,14 @@ const SingleService = () => {
                             {
                                 review.map(reating =>
 
-                                    <div key={reating._id}  className="review-user">
+                                    <div key={reating?._id}  className="review-user">
+                                        <div className="profile-img-comment">
+                                        <p>{reating?.name}</p>
                                         <img src="https://html.modernwebtemplates.com/psychologist/images/faces/02.jpg" alt="" />
-                                        <p >{reating.review}</p>
+                                        </div>
+                                        
+                                        
+                                        <p >{reating?.review}</p>
                                     </div>
                                 )
                             }

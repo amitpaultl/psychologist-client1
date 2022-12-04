@@ -4,7 +4,7 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 const ServiceCard = ({ service }) => {
     return (
-        <div className='col-md-4'>
+        <div className='col-lg-4 col-md-6'>
             <div className="sengle-srivice mb-4">
                 <PhotoProvider>
                     <PhotoView src={service?.url}>
