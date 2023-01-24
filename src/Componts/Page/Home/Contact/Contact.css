@@ -1,0 +1,108 @@
+.contact__banner{
+    background-image: url('../../../assarts/Image/5\ \(1\).jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    min-height: 500px;
+}
+
+.bg-overlay:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(27,26,26,.05);
+}
+
+.heading__title {
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 30px;
+    color: #fff!important;
+}
+
+.contact .inner-padding {
+    padding: 100px 110px 110px;
+}
+
+.heading__title {
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 30px;
+}
+.mb-50 {
+    margin-bottom: 50px!important;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    height: 50px;
+    line-height: 50px;
+    border: none;
+    border-bottom: 2px solid #e6e6e6;
+    border-radius: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+textarea.form-control {
+    height: 122px;
+}
+
+.btn__primary.btn__hover3:active, .btn__primary.btn__hover3:focus, .btn__primary.btn__hover3:hover {
+    background-color: #222;
+    color: #fff;
+    border-color: #222;
+    
+}
+
+.btn__primary:active, .btn__primary:focus, .btn__primary:hover {
+    background-color: transparent;
+    color: #e6ae48;
+}
+.btn:hover {
+    color: #212529;
+    text-decoration: none;
+}
+
+
+
+.btn__primary {
+    background-color: #e6ae48;
+    color: #fff;
+    border: 2px solid #e6ae48;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    width: 170px;
+    height: 50px;
+    transition: 0.3s;
+}
+
+.btn.focus, .btn:focus, .form-control, .form-control:focus, button, button:focus {
+    outline: 0;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none !important;
+}
+.contact .col-sm-12.col-md-12.col-lg-6 {
+    padding: 0;
+}
+
+.align-v-h {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

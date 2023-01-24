@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { AuthProvider } from '../../Context/AuthContext';
 
-const PrivateRouter = ({children}) => {
+const PrivateRouter = ({ children }) => {
     const { user, loader } = useContext(AuthProvider)
 
     //current location 
@@ -11,12 +11,11 @@ const PrivateRouter = ({children}) => {
     //spanier add
     if (loader) {
         return (
-                    <div className='spanier text-center '>
-                        <div className="spanier-center spinner-grow" role="status">
-                            <span className="visually-hidden">Loading...</span>
-                        </div>
-                    </div>
-                )
+            <div className='text-center '>
+                    <span >Loading...</span>
+                
+            </div>
+        )
     }
 
     //current User location replace

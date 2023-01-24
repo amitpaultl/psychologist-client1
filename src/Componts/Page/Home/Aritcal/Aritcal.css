@@ -1,0 +1,137 @@
+.news-section {
+    position: relative;
+    display: block;
+    background: #fff;
+    padding: 113px 0px 120px 0px;
+}
+
+.news-block-one {
+    position: relative;
+    display: block;
+}
+
+.news-block-one .inner-box {
+    position: relative;
+}
+
+.news-block-one .image-box {
+    position: relative;
+    display: block;
+    background: #000;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.news-block-one .image-box img {
+    width: 100%;
+    border-radius: 10px;
+    transition: all 500ms ease;
+}
+
+.news-block-one:hover .image-box img {
+    width: 100%;
+    opacity: 0.2;
+    transform: scale(1.1);
+}
+
+.news-block-one .inner-box .categorie-list {
+    position: absolute;
+    left: 17px;
+    top: 17px;
+}
+
+.news-block-one .inner-box .categorie-list a {
+    position: relative;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #6ecc84;
+    background: #fff;
+    padding: 2px 22px 3px 23px;
+    border-radius: 25px;
+    margin: 0px 3px;
+}
+
+.news-block-one .lower-content {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+}
+
+.news-block-one .lower-content .post-info {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.news-block-one .lower-content .post-info li {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #8a8d91;
+    line-height: 20px;
+    padding-right: 16px;
+    margin-right: 10px;
+}
+
+.news-block-one .lower-content .post-info li:before {
+    position: absolute;
+    content: '';
+    background: #8a8d91;
+    width: 1px;
+    height: 10px;
+    top: 5px;
+    right: 0px;
+}
+
+.news-block-one .lower-content h3 {
+    position: relative;
+    display: block;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 31px;
+}
+
+.news-block-one .lower-content h3 a {
+    position: relative;
+    display: inline-block;
+    color: #000;
+}
+
+.news-block-one .lower-content .theme-btn-two {
+    padding: 10px 32px;
+}
+
+.theme-btn-two {
+    position: relative;
+    display: inline-block;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    padding: 15px 45px;
+    background: transparent;
+    border: 2px solid #ededed;
+    line-height: 26px;
+    color: #000;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: capitalize;
+    transition: all 500ms ease;
+    cursor: pointer;
+    text-align: center;
+    z-index: 1;
+}
+
+.theme-btn-two:hover {
+    color: #fff;
+    background: #6ecc84;
+    border-color: #6ecc84;
+}
+
+a{
+    text-decoration: none;
+}

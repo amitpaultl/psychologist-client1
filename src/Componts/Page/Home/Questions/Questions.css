@@ -1,0 +1,107 @@
+.ebook-section {
+    background-image: url('../../../assarts/Image/ebook-bg.jpg');
+    position: relative;
+    display: block;
+    padding: 100px 0px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.ebook-section:before {
+    position: absolute;
+    content: '';
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
+
+.ebook-section .image-box {
+    position: relative;
+    display: block;
+    margin-right: 70px;
+}
+
+.ebook-section .image-box .image {
+    position: relative;
+    display: block;
+    background: #6ecc84;
+}
+
+.ebook-section .image-box .image img {
+    width: 100%;
+}
+
+.ebook-section .content-box {
+    position: relative;
+    display: block;
+    margin-left: 70px;
+    margin-top: 11px;
+}
+
+.ebook-section .sec-title .title {
+    color: #fff;
+}
+
+.sec-title .title {
+    position: relative;
+    display: block;
+    font-size: 24px;
+    line-height: 30px;
+    font-family: 'Pacifico', cursive;
+    color: #6ecc84;
+    margin-bottom: 22px;
+}
+
+.ebook-section .content-box h1 {
+    position: relative;
+    display: block;
+    font-size: 45px;
+    line-height: 50px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 32px;
+}
+
+.ebook-section .content-box h1 span {
+    font-weight: 600;
+}
+
+.ebook-section .content-box .text {
+    position: relative;
+    display: block;
+    color: #fff;
+    margin-bottom: 43px;
+}
+
+.ebook-section .content-box .btn-box a {
+    position: relative;
+    display: inline-block;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    padding: 17px 58px;
+    background: #fff;
+    line-height: 26px;
+    color: #000;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: capitalize;
+    transition: all 500ms ease;
+    cursor: pointer;
+    text-align: center;
+    z-index: 1;
+    text-decoration: none;
+}
+
+.ebook-section .content-box .btn-box a:hover {
+    color: #fff;
+    background: #000;
+}
+
+a{
+    text-decoration: none;
+}

@@ -13,7 +13,7 @@ const ServiceHome = () => {
     }, [])
 
     return (
-        <div className='service-area'>
+        <div className='service-area' data-aos="fade-up" data-aos-duration="2000">
             <div className="container">
                 <div className="row">
                     <div className="title-area text-center">

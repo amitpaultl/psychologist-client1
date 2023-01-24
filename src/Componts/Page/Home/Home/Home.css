@@ -1,5 +1,5 @@
 .hero-area{
-    background-image: url('https://html.modernwebtemplates.com/psychologist/images/slide01.jpg');
+    background-image: url('../../../assarts/Image/04.jpg');
     background-position: center;
     background-size: cover;
     padding: 225px 0;
@@ -150,12 +150,12 @@ img.singe {
     margin: 10px 0;
 }
 
+.welcome-image img {
+    width: 100%;
+}
+
 /* responsive */
-@media (max-width: 1024.98px) { 
-    .welcome-image img {
-        margin-top: 22px;
-    }
- }
+
 
  @media (max-width: 768.98px) { 
     .welcome-image img {
@@ -166,10 +166,5 @@ img.singe {
     }
   }
 
-  @media (min-width: 1024.98px) { 
-    .welcome-image img {
-        margin-top: 20px;
-    }
 
-   }
 
